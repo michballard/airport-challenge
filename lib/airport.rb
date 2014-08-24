@@ -42,7 +42,7 @@ class Airport
 	end
 
 	def release(plane)
-		raise "This airport is empty" if empty?
+		raise "Empty airport - No plane to take off" if empty?
 		raise "Stormy weather - Plane cannot take off" if stormy?
 		planes.delete(plane)
 	end

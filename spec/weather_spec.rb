@@ -4,8 +4,8 @@ require './lib/plane'
 
 describe Weather do
 
-	let(:airport) { Airport.new(:capacity => 200) }
-	let(:plane) { Plane.new }
+	let(:airport) { Airport.new }
+	let(:plane)   { Plane.new   }
 
 	context 'weather conditions' do 
 		it "knows when it's sunny" do 

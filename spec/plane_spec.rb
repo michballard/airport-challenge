@@ -2,16 +2,8 @@ require './lib/plane.rb'
 
 describe Plane do
 
-	let(:plane) { Plane.new }
-
-	def taking_off_and_landing
-		plane.take_off!
-		plane.land!
-	end
-
-	it 'is a plane' do 
-		expect(plane).to be_a Plane
-	end
+	let(:plane)        { Plane.new           }
+	let(:flying_plane) { Plane.new.take_off! }
 
 	it 'a plane is landed when it is created' do
 		expect(plane.status).to eq Plane::Landed
@@ -29,15 +21,14 @@ describe Plane do
 	end
 
 	it 'can land' do
-		taking_off_and_landing
+		flying_plane.land!
 		expect(plane.status).to eq Plane::Landed
 	end
 
-	it 'changes its status to not flying after landing' do
-		plane.take_off!
-		expect(plane.status).to eq Plane::Flying
-		plane.land!
-		expect(plane.status).to eq Plane::Landed
+	it 'changes its status to landed after landing' do
+		expect(flying_plane.status).to eq Plane::Flying
+		flying_plane.land!
+		expect(flying_plane.status).to eq Plane::Landed
 	end
 
 end
