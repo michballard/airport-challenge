@@ -1,6 +1,8 @@
 | [Makers Academy](http://www.makersacademy.com) | Week 3 | Friday Challenge |
 | ------ | ------ | ------ |
 
+<a href="https://codeclimate.com/repos/5460eb0fe30ba028940161f8/feed"><img src="https://codeclimate.com/repos/5460eb0fe30ba028940161f8/badges/ead37b52191437cb9955/gpa.svg" /></a>
+
 Airport
 =======
 
